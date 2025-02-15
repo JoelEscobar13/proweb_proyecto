@@ -1,20 +1,27 @@
 /* Estilo General */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Lato', sans-serif;
     background-color: #f8f9fa;
     margin: 0;
     padding: 0;
     padding-top: 3rem;
+    line-height: 1.6;
 }
 /* Estilos del Navbar */
 .navbar {
     background-color: #ffcb05;
+    padding: 1rem 2rem;
 }
 
 .navbar a.nav-link {
     color: #000 !important;
     font-weight: bold;
     text-transform: uppercase;
+    padding: 0.5rem 1rem;
 }
 
 .navbar a.nav-link:hover {
@@ -25,38 +32,23 @@ body {
     max-height: 40px;
 }
 
-/* Navbar en dispositivos móviles */
-@media (max-width: 768px) {
-    .navbar-nav {
-        text-align: center;
-        width: 100%;
-    }
-
-    .navbar-nav .nav-item {
-        display: inline-block;
-        margin: 0 10px; /* Espacio entre los elementos */
-    }
-
-    .navbar-toggler {
-        border-color: #ffcb05;
-    }
-}
-
 /* Estilos de la sección de inicio (header) */
 #intro {
     background-color: #1d72b8;
     color: white;
-    padding: 80px 0;
+    padding: 100px 0;
     position: relative;
     text-align: center;
 }
 
 #intro .display-4 {
     font-size: 3rem;
+    margin-bottom: 1rem;
 }
 
 #intro p {
     font-size: 1.2rem;
+    margin-bottom: 2rem;
 }
 
 #intro .btn-light {
@@ -94,6 +86,7 @@ html, body {
 #features {
     background-color: #f1f1f1;
     padding: 60px 0;
+    text-align: center;
 }
 
 #features h2 {
@@ -116,15 +109,25 @@ html, body {
     border-color: #ffcb05;
 }
 
+#features .row {
+    align-items: center;
+}
+
+#features img {
+    margin-bottom: 1rem;
+}
+
 /* Estilo de las imágenes del carrusel */
 #characters img {
     border-radius: 50%;
     max-width: 200px;
+    margin-bottom: 1rem;
 }
 
 /* Estilos del Formulario de la Pokédex */
 #pokedexForm .form-control {
     border-radius: 25px;
+    margin-bottom: 1rem;
 }
 
 #pokedexForm button {
@@ -134,12 +137,102 @@ html, body {
 #pokemonCard {
     max-width: 400px;
     margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#pokemonCard .card-body {
+    padding: 2rem;
+}
+
+#pokemonCard img {
+    border-radius: 50%;
+    border: 2px solid #1d72b8;
+    margin-bottom: 1rem;
+}
+
+#pokemonCard h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#pokemonCard p {
+    margin-bottom: 0.5rem;
+}
+
+#pokemonCard h4 {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+}
+
+#pokemonCard ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+#pokemonCard ul li {
+    background-color: #f8f9fa;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+/* Mensaje de error */
+#errorMessage {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Estilos de la sección de registro */
+#register {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    text-align: center;
+}
+
+#register h2 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+#register p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+#register form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#register .form-label {
+    font-weight: bold;
+    color: #333;
+}
+
+#register .form-control {
+    border-radius: 25px;
+    margin-bottom: 1rem;
+}
+
+#register button {
+    border-radius: 25px;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
 }
 
 /* Footer */
 footer {
     background-color: #1d72b8;
     color: white;
+    padding: 2rem 0;
 }
 
 footer a {
@@ -149,6 +242,14 @@ footer a {
 
 footer a:hover {
     color: #ffcb05;
+}
+
+footer .row {
+    justify-content: center;
+}
+
+footer .col-md-4 {
+    margin-bottom: 1rem;
 }
 
 /* Estilos para las redes sociales */
@@ -173,6 +274,14 @@ footer .bi:hover {
         margin: 0 10px; /* Espacio entre los elementos */
     }
 
+    .navbar {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar a.nav-link {
+        padding: 0.5rem;
+    }
+
     #intro h1 {
         font-size: 2.5rem;
     }
@@ -181,8 +290,28 @@ footer .bi:hover {
         font-size: 1rem;
     }
 
+    #intro {
+        padding: 60px 0;
+    }
+
+    #intro .display-4 {
+        font-size: 2rem;
+    }
+
+    #intro p {
+        font-size: 1rem;
+    }
+
     #charactersCarousel .carousel-item img {
         max-width: 150px;
+    }
+
+    #features img {
+        max-width: 100%;
+    }
+
+    #characters img {
+        max-width: 100%;
     }
 }
 
@@ -194,4 +323,17 @@ footer .bi:hover {
     #intro p {
         font-size: 0.9rem;
     }
+
+    #intro .display-4 {
+        font-size: 1.5rem;
+    }
+
+    #intro p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Ajuste del desplazamiento del navbar */
+.navbar-nav .nav-link {
+    scroll-margin-top: 2rem; /* Ajusta este valor según la altura de tu navbar */
 }

@@ -59,4 +59,22 @@ document.addEventListener("DOMContentLoaded", () => {
             errorMessage.classList.remove("d-none");
         }
     });
+
+    // Adjust scroll position for navbar links
+    const navbarLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    navbarLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            const offset = 70; // Adjust this value according to your navbar height
+            const elementPosition = targetElement.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        });
+    });
 });
